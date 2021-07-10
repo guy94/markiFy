@@ -1,7 +1,7 @@
 # markiFy
 
 ## the project is devided to 3 parts:
-1. Server side implemented with Node.js.
+1. Server side implemented with Node.js devided to layers service - domain - data.
 2. RESTful API located at dist folder, along with a file of all scanned folders paths (to avoid double scanning).
 3. Client side implemented with Vue.js.
 
