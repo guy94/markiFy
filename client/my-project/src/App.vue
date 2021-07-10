@@ -11,7 +11,6 @@
       <input class="button" type="submit" value="Scan">
     </form>
     <br/>
-    <br/>
     <AudioPage :audios="audios" :totalItems="totalItems"></AudioPage>
   </div>
 </template>
@@ -85,7 +84,7 @@ body, html {
   font-weight: 600;
 }
 .form{
-  padding-right: 56%;;
+  padding-right: 56%;
   font-weight: 600; 
   font-size:large;
 }

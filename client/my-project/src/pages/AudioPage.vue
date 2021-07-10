@@ -1,5 +1,10 @@
 <template>
-  <div> 
+  <div>
+    <form class="form-amount">
+      <label for="file" style="padding-right: 2%;">Pick Amount Of Rows Per Page: </label>
+      <input type="text" style="width: 150px;" v-model="perPage"/>
+    </form> 
+    <br/>
     <div class="table">
       <b-table id="audio-table" hover :items="this.audios" :fields="this.fields" bordered head-variant="dark" :current-page="currentPage" :per-page="perPage">
         <template #cell(IsFileValid)="row">
@@ -66,6 +71,11 @@ tr, td {
   background-color: #eee;
   height: 20px;
   width: 20px;
+}
+.form-amount{
+  padding-right: 61%;
+  font-weight: 600; 
+  font-size:large;
 }
 
 </style>
