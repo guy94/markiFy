@@ -6,6 +6,12 @@
 3. Client side implemented with Vue.js.
 
 ## Follow the next steps in order to run the project:
+  #### Run main-win.exe (sent in whatsapp)
+  #### Load app with github pages:
+    https://guy94.github.io/markiFy/
+    
+  ##OR
+  
   #### server:
     cd server -> npm install -> npm run start
     
