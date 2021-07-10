@@ -8,11 +8,11 @@
 ## Follow the next steps in order to run the project:
   #### server: 
     1. run main-win.exe (sent in whatsapp)
-  #### client: 
+  #### app: 
     2. Load app with github pages:
     https://guy94.github.io/markiFy/
     
-  ## ----OR----
+  ## ---- OR ----
   
   #### server:
     1. cd server -> npm install -> npm run start    
