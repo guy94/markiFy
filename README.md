@@ -7,7 +7,7 @@
 
 ## Follow the next steps in order to run the project:
   #### server:
-    cd server -> npm install -> npm run start.
+    cd server -> npm install -> npm run start
     
   #### app:
-    cd client -> cd my-project -> npm install -> npm run serve.
+    cd client -> cd my-project -> npm install -> npm run serve
