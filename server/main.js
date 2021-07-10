@@ -1,6 +1,7 @@
 var express = require("express");
 var logger = require("morgan");
 var axios = require("axios");
+var path = require('path');
 var cors = require("cors");
 var mongoose = require("mongoose")
 var app = express();
@@ -14,6 +15,8 @@ const corsConfig = {
 };
 app.use(cors(corsConfig));
 app.options("*", cors(corsConfig));
+
+app.use(express.static(path.join(__dirname, '../client/my-project/dist')));
 
 const port = process.env.PORT || "3000";
 var dbURI = "mongodb+srv://guy94:nubduehbd@cluster0.3bvbp.mongodb.net/guy94?retryWrites=true&w=majority";
@@ -37,6 +40,10 @@ app.use(function (err, req, res, next) {
     res.status(err.status || 500).send(err.message);
   });
 
+
+app.get('/', (req,res) => {
+    res.sendFile(path.join(__dirname, '../client/my-project/dist/index.html'));
+  });
 /*
 testing route
 */
