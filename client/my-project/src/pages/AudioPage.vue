@@ -26,7 +26,7 @@ export default {
   data() {
     return{
       fields: ['FileName', 'LengthInMin', 'SizeInMb', 'IsFileValid'],
-      perPage: 3,
+      perPage: 10,
       currentPage: 1,
     }  
   },

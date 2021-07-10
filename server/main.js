@@ -5,11 +5,13 @@ var cors = require("cors");
 var mongoose = require("mongoose")
 var app = express();
 
+/*
+allow all origins to access the server
+*/
 const corsConfig = {
     origin: true,
     credentials: true,
 };
-
 app.use(cors(corsConfig));
 app.options("*", cors(corsConfig));
 
@@ -35,8 +37,7 @@ app.use(function (err, req, res, next) {
     res.status(err.status || 500).send(err.message);
   });
 
-// const server = app.listen(port, () => {
-//     console.log(`Server listen on port ${port}`);
-// });
-
+/*
+testing route
+*/
 app.get("/alive", (req, res) => res.send("I'm alive"));

@@ -54,11 +54,6 @@ export default {
   mounted(){
     this.getAudios();
   },
-  watch:{
-    audios: function(){
-      // this.getAudios()
-    }
-  },
 }
 </script>
 
@@ -79,7 +74,7 @@ body, html {
   color: #2c3e50;
 }
 .button{
-  background-color: #263a37; /* Green */
+  background-color: #263a37;
   border: none;
   color: white;
   margin-left: 15px;
