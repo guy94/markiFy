@@ -1,0 +1,25 @@
+{
+  "name": "audiocodes",
+  "version": "1.0.0",
+  "description": "home assignment",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon run main.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "get-mp3-duration": "^1.0.0",
+    "gridfs-store": "^1.0.8",
+    "gridfs-stream": "^1.1.1",
+    "line-reader": "^0.4.0",
+    "line-reader-sync": "^0.1.0",
+    "mongoose": "^5.13.2",
+    "morgan": "^1.10.0"
+  }
+}

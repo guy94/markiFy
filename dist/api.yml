@@ -1,0 +1,106 @@
+openapi: 3.0.0
+info:
+  title: api
+  description: API for audioCodes
+  version: 1.0.0
+tags:
+  - name: Audios
+paths:
+  /audio/addAudios:
+    post:
+      tags:
+        - Audios        
+      summary: scan folder for all mp3 files
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                folderPath:
+                  type: string
+                  description: folder containing mp3 files
+                  example: C:/Users/guykl/Desktop/music
+      responses:
+        "200":
+          description: files retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: string
+                example: folder was scanned successfully
+        "400":
+          description: folder was already scanned
+        "409":
+          description: incorrect request body args
+  /audio/getAudios:
+    get:
+      tags:
+        - Audios        
+      summary: Return all audio files in a folder
+      responses:
+        "200":
+          description: files retrieved successfully
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Audios"
+        "500":
+          description: problem with server
+  /audio/markAudios:
+    put:
+      tags:
+        - Audios        
+      summary: mark mp3 file as valid OR unvalid by objectId
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                objectId:
+                  type: string
+                  description: mongodb objectId 
+                  example: 60e81d8976f3e87b7c19cb77
+      responses:
+        "200":
+          description: file validation changed successfully
+          content:
+            application/json:
+              schema:
+                type: string
+                example: file validation changed successfully
+        
+        "409":
+          description: incorrect request body args
+
+components:
+  schemas:
+    Audios:
+      type: array
+      items:
+        type: object
+        $ref: "#/components/schemas/AudioPreview"
+    AudioPreview:
+      type: object
+      properties:
+        _id:
+          type: string
+          description: mp3 file mongodb id
+          example: '60e81d8976f3e87b7c19cb77'
+        IsValid:
+          type: boolean
+          description: whether mp3 file is valid
+          example: false
+        FileName:
+          type: string
+          description: mp3 file name
+          example: 'Sweet Home Chicago'
+        Size:
+          type: number
+          description: mp3 file size in MB
+          example: 11.22
+        Length:
+          type: number
+          description: mp3 file length in minutes
+          example: 7.79
