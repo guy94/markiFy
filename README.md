@@ -7,9 +7,9 @@
 
 ## Follow the next steps in order to run the project:
   #### server: 
-    Run main-win.exe (sent in whatsapp)
+    1. run main-win.exe (sent in whatsapp)
   #### client: 
-    #### Load app with github pages:
+    2. Load app with github pages:
     https://guy94.github.io/markiFy/
     
   ## ----OR----
