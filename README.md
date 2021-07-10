@@ -6,8 +6,8 @@
 3. Client side implemented with Vue.js.
 
 ## Follow the next steps in order to run the project:
-  ####server:
+  #### server:
     cd server -> npm install -> npm run start.
     
-  ####app:
+  #### app:
     cd client -> cd my-project -> npm install -> npm run serve.
