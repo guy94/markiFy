@@ -21,7 +21,6 @@ let readerPromise = (folderPath) => {
 async function folderAlreadyScanned(folderPath){
 
     let status = await readerPromise(folderPath);
-    console.log(status)
     return status;
 }
 
