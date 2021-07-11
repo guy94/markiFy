@@ -9,7 +9,7 @@
   #### server: 
     1. run main-win.exe (sent in whatsapp)
   #### app: 
-    2. Load app with github pages:
+    2. load app with github pages:
     https://guy94.github.io/markiFy/
     
   ## ---- OR ----
